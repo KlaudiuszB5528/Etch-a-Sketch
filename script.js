@@ -21,6 +21,36 @@ const randomColor = (e) => {
 
 acitveFunc = randomColor;
 
+black.addEventListener("click", (e) => {
+  addEvent(blackHandle);
+  acitveFunc = blackHandle;
+});
+
+random.addEventListener("click", (e) => {
+  addEvent(randomColor);
+  acitveFunc = randomColor;
+});
+
+clear.addEventListener("click", (e) => {
+  acitveFunc = randomColor;
+  generateGrid();
+});
+
+sticky.addEventListener("click", (e) => {
+  stickyHandle();
+  acitveFunc = stickyHandle;
+});
+
+erase.addEventListener("click", (e) => {
+  addEvent(eraseHandle);
+  acitveFunc = eraseHandle;
+});
+
+shading.addEventListener("click", (e) => {
+  addEvent(shadingHandle);
+  acitveFunc = shadingHandle;
+});
+
 const generateGrid = () => {
   let div = document.querySelectorAll(".tile");
   div.forEach((tile) => {
@@ -38,6 +68,7 @@ const generateGrid = () => {
     container.style.gridTemplateColumns = `repeat(${value},1fr)`;
   }
 };
+
 generateGrid();
 
 input.addEventListener("input", generateGrid);
@@ -64,38 +95,9 @@ const shadingHandle = (e) => {
 };
 
 const eraseHandle = (e) => {
-  e.target.style.backgroundColor = "white";
+  e.target.style.backgroundColor = "transparent";
 };
 
 const blackHandle = (e) => {
   e.target.style.backgroundColor = "black";
 };
-
-black.addEventListener("click", (e) => {
-  addEvent(blackHandle);
-  acitveFunc = blackHandle;
-});
-
-random.addEventListener("click", (e) => {
-  addEvent(randomColor);
-  acitveFunc = randomColor;
-});
-
-clear.addEventListener("click", (e) => {
-  acitveFunc = randomColor;
-  generateGrid();
-});
-
-sticky.addEventListener("click", (e) => {
-  stickyHandle();
-  acitveFunc = stickyHandle;
-});
-
-erase.addEventListener("click", (e) => {
-  addEvent(eraseHandle);
-});
-
-shading.addEventListener("click", (e) => {
-  addEvent(shadingHandle);
-  acitveFunc = shadingHandle;
-});
