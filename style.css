@@ -117,6 +117,9 @@ footer {
   header {
     font-size: 1.7rem;
   }
+  #buttons ul {
+    margin: 0 auto;
+  }
   img {
     display: none;
   }
