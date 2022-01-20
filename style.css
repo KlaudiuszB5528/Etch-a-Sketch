@@ -114,6 +114,9 @@ footer {
 }
 
 @media (max-width: 540px) {
+  header {
+    font-size: 1.7rem;
+  }
   img {
     display: none;
   }
