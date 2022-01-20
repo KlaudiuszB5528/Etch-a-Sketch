@@ -21,36 +21,6 @@ const randomColor = (e) => {
 
 acitveFunc = randomColor;
 
-black.addEventListener("click", (e) => {
-  addEvent(blackHandle);
-  acitveFunc = blackHandle;
-});
-
-random.addEventListener("click", (e) => {
-  addEvent(randomColor);
-  acitveFunc = randomColor;
-});
-
-clear.addEventListener("click", (e) => {
-  acitveFunc = randomColor;
-  generateGrid();
-});
-
-sticky.addEventListener("click", (e) => {
-  stickyHandle();
-  acitveFunc = stickyHandle;
-});
-
-erase.addEventListener("click", (e) => {
-  addEvent(eraseHandle);
-});
-
-shading.addEventListener("click", (e) => {
-  addEvent(shadingHandle);
-  acitveFunc = shadingHandle;
-});
-
-//generate grid function
 const generateGrid = () => {
   let div = document.querySelectorAll(".tile");
   div.forEach((tile) => {
@@ -100,3 +70,32 @@ const eraseHandle = (e) => {
 const blackHandle = (e) => {
   e.target.style.backgroundColor = "black";
 };
+
+black.addEventListener("click", (e) => {
+  addEvent(blackHandle);
+  acitveFunc = blackHandle;
+});
+
+random.addEventListener("click", (e) => {
+  addEvent(randomColor);
+  acitveFunc = randomColor;
+});
+
+clear.addEventListener("click", (e) => {
+  acitveFunc = randomColor;
+  generateGrid();
+});
+
+sticky.addEventListener("click", (e) => {
+  stickyHandle();
+  acitveFunc = stickyHandle;
+});
+
+erase.addEventListener("click", (e) => {
+  addEvent(eraseHandle);
+});
+
+shading.addEventListener("click", (e) => {
+  addEvent(shadingHandle);
+  acitveFunc = shadingHandle;
+});
