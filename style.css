@@ -89,3 +89,32 @@ footer {
 .fa-github:hover {
   transform: rotateY(1turn) scale(1.2);
 }
+
+@media (max-width: 767px) {
+  header {
+    margin: 0 auto;
+    font-size: 2em;
+  }
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+  #display {
+    order: 2;
+    width: 100%;
+  }
+  #buttons {
+    margin-top: 1rem;
+    order: 3;
+  }
+  footer {
+    order: 4;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 540px) {
+  img {
+    display: none;
+  }
+}
