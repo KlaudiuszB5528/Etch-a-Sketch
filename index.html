@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f9753df0df.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Etch-a-Sketch!</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img
+          src="/Etch-a-Sketch/img/SprayCanGraffiti.svg"
+          alt="spraycan image"
+        />
+        <h1>Etch-a-Sketch</h1>
+        <img
+          src="/Etch-a-Sketch/img/angryspraycan.svg"
+          alt="angry spraycan image"
+        />
+      </header>
+      <section id="buttons">
+        <ul>
+          <li><button id="random">Random Color</button></li>
+          <li><button id="sticky">Sticky Random Color</button></li>
+          <li><button id="black">Black Color</button></li>
+          <li><button id="shading">Shading</button></li>
+          <li><button id="erase">Erase</button></li>
+          <li><button id="clear">Clear</button></li>
+          <li>
+            <span id="adjust-message">123</span>
+          </li>
+          <li>
+            <input
+              type="range"
+              name="Board size"
+              id="sizeChange"
+              min="4"
+              max="40"
+              value="8"
+            />
+          </li>
+        </ul>
+      </section>
+      <div id="display"></div>
+      <footer>
+        Copyright &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Klaudiusz Biegacz
+        <a href="https://github.com/KlaudiuszB5528" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </footer>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

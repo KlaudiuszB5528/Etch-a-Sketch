@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background: rgb(156, 190, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(156, 190, 205, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+#container {
+  width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+header {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-family: "Sacramento", cursive;
+  margin-left: 2.7em;
+}
+h1 {
+  padding: 0 1rem;
+}
+img {
+  width: 6rem;
+  height: 6rem;
+}
+#display {
+  width: 500px;
+  height: 500px;
+  border: 0.5px solid black;
+  display: grid;
+}
+#buttons ul {
+  display: flex;
+  flex-flow: column;
+  margin-right: 3rem;
+  gap: 1rem;
+  list-style-type: none;
+}
+#adjust-message {
+  margin-top: 1rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+button {
+  width: 100%;
+  background-color: rgba(0, 212, 255, 1);
+  font-size: 0.8rem;
+  color: black;
+  border-radius: 5px;
+  height: 2rem;
+}
+
+.tile {
+  border: 0.5px solid black;
+  transition: background-color 0.3s linear, transform 1s;
+}
+
+footer {
+  margin-left: 9rem;
+  padding-top: 1rem;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.fa-github {
+  color: black;
+  font-size: 23px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotateY(1turn) scale(1.2);
+}
