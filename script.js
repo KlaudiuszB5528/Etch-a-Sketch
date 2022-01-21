@@ -37,8 +37,8 @@ clear.addEventListener("click", (e) => {
 });
 
 sticky.addEventListener("click", (e) => {
-  stickyHandle();
-  acitveFunc = stickyHandle;
+  addEvent(randomColor, true);
+  acitveFunc = handleSticky;
 });
 
 erase.addEventListener("click", (e) => {
@@ -73,20 +73,17 @@ generateGrid();
 
 input.addEventListener("input", generateGrid);
 
-const addEvent = (func) => {
+const addEvent = (func, isOnce) => {
+  console.log(isOnce);
   let div = document.querySelectorAll(".tile");
   div.forEach((tile) => {
     tile.removeEventListener("mouseover", acitveFunc);
-    tile.addEventListener("mouseover", func);
+    tile.addEventListener("mouseover", func, { once: isOnce });
   });
 };
 
-const stickyHandle = () => {
-  let div = document.querySelectorAll(".tile");
-  div.forEach((tile) => {
-    tile.removeEventListener("mouseover", acitveFunc);
-    tile.addEventListener("mouseover", randomColor, { once: true });
-  });
+const handleSticky = () => {
+  return addEvent(randomColor, true);
 };
 
 const shadingHandle = (e) => {
