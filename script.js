@@ -74,7 +74,6 @@ generateGrid();
 input.addEventListener("input", generateGrid);
 
 const addEvent = (func, isOnce) => {
-  console.log(isOnce);
   let div = document.querySelectorAll(".tile");
   div.forEach((tile) => {
     tile.removeEventListener("mouseover", acitveFunc);
